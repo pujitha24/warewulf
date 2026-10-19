@@ -2,13 +2,13 @@
 
 PATH=$PATH:/sbin:/usr/sbin:/bin:/usr/bin
 
-if ! command -v info >/dev/null; then
+if [ "$(command -v info)" != "info" ]; then
     info() {
         printf '%s\n' "$*"
     }
 fi
 
-if ! command -v die >/dev/null; then
+if [ "$(command -v die)" != "die" ]; then
     die() {
         printf '%s\n' "$*" >&2
         exit 1

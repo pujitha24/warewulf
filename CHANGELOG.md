@@ -75,6 +75,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   overlay through another symlink.
 - Node discovery ignores requests whose hardware address is not a valid MAC
   address, rather than recording it in `nodes.conf`.
+- The wwinit, sfdisk, mkfs, mkswap, and ignition overlay scripts no longer
+  mistake an `info` executable (e.g., from texinfo) for the `info` logging
+  function, and now define their own `info` and `die` helpers in that case.
 
 ### Fixed
 

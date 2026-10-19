@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if ! command -v info >/dev/null; then
+if [ "$(command -v info)" != "info" ]; then
     info() {
         printf '%s\n' "$*"
     }
